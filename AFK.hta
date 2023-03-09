@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html>
+<head><title>AFK Auto Arena</title>
+<HTA:APPLICATION ID="AFK Auto Arena" ICON="Icon.ico" Border="yes" showInTaskbar="yes" innerBorder="yes" scroll="yes" navigable="yes"  SINGLEINSTANCE="yes" windowstate="minimized">
+
+	<meta name="viewport" content="width=1000, initial-scale=0.8">
+	<meta http-equiv="X-UA-Compatible" content="IE=10">   
+	<meta charset="UTF-8"> 
+	<link rel="stylesheet" href="css/style.css">  
+	<link href="css/bootstrap.min.css" rel="stylesheet"> 
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<script src="onload.js" type="text/javascript" language="javascript"></script> 
+	<script src="sleeper.vbs" type="text/vbscript" language="VBScript"></script> 
+	<script src="misc.vbs" type="text/vbscript" language="VBScript"></script> 
+	<script src="makro.vbs" type="text/vbscript" language="VBScript"></script> 
+</head>
+
+<body scroll="yes">
+    <div class="bg-img">
+        <div class="content circle-form">
+            <header>AFK Auto Arena</header>
+            <div>
+					<div id="tmArray" class=" space" style="font-size:18px;text-align: center;color:white;font-weight: bold;">
+					<label class="right" for="T1">
+						Team 1
+					<br>
+					<input type="checkbox" id="T1" value="1" Checked>
+					</label>
+					<label class="right" for="T2">
+						Team 2
+					<br>
+					<input type="checkbox" id="T2" value="1" Checked>
+										</label>
+					<label class="right" for="T3">
+						Team 3
+					<br>
+					<input type="checkbox" id="T3" value="1" Checked>
+										</label>
+					<label class="right" for="T4">
+						Team 4
+					<br>
+					<input type="checkbox" id="T4" value="1" Checked>
+										</label>
+					<label for="T5">
+						Team 5
+					<br>
+					<input type="checkbox" id="T5" value="1" Checked>
+					</label>
+					</form>
+				</div>
+                <div class="field space">
+					<span class="fa fa-clock-o"></span>
+                    <input type="number" id="teamTime" required placeholder="Kampfzeit pro Team, z.b. 3, 5 oder 10 min" >
+                </div>
+				<div class="space" style="font-size:18px;text-align: center;color:white;">
+                     Notiz: Für  leichte (3), mittelschwere (5) oder schwere (10) Stufen
+                </div>
+				<div class="custom-select space">
+				<span class="fa fa-stop"></span>
+					<select id="scriptTime">
+						<option value="0" disabled selected hidden>Laufzeit des Scripts, z.b. 6 h</option>
+						<option value="1">1</option>
+						<option value="2">3</option>
+						<option value="3">6</option>
+						<option value="4">Dauerschleife</option>
+					</select>
+				</div>
+				<div class="custom-select space">
+				<span class="fa fa-university"></span>
+					<select id="modus">
+						<option value="0" disabled selected>Gib den Kampfmodus an</option>
+						<option value="1">Feldzug</option>
+						<option value="2">Königsturm</option>
+						<option value="3">Himmlisches Heiligtum</option>
+						<option value="4">Turm des Lichtes</option>
+						<option value="5">Die Brutale Zitadelle</option>
+						<option value="6">Höllische Festung</option>
+						<option value="7">Die Verlassene Nekropolis</option>
+						<option value="8">Der Weltenbaum</option>
+					</select>
+				</div>
+				<div class="toggle text space">
+					<label style="font-size:18px;text-align: center;color:white;">
+						Ausgangspunkt
+						<input id="startPoint" type="checkbox" value="0" Unchecked>
+						<span class="slider"></span>
+					</label>
+				</div>
+			<div>
+				<textarea style="font-size:12px" id="logger" name="logger"></textarea>
+			</div>
+				<div>
+					<button class="button button1" id="btnStart"  onClick="javascript:btnStartClick()" >Start</button>
+					<button class="button button2" id="btnStop"  onClick="javascript:btnStopClick()">Stop</button>
+					<button class="button button2" id="btnExit"  onClick="vbscript:btnExitClick()">Exit</button>
+				</div>
+            </div>		
+        </div>
+	</div>
+	
+<script src="script.js"></script>
+</body>
+</html>
