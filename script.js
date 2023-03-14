@@ -65,7 +65,7 @@ for(i = 0; i < trends.length; i++) {
 			}				
 		case 'Thursday':
 			if(lastMidnight>=twoAM){
-				if (i==3 |i==4| i==5| i==6 |i==8){
+				if (i==3 |i==4| i==5| i==8){
 					trend.setAttribute("disabled");
 				} else {				
 					trend.style.color='Blue';

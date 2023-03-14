@@ -26,7 +26,7 @@ autokampf=startPoint.checked
 					' WriteLogger(vbTab&"Loop abgebrochen")
 					' Exit sub
 				' End if
-				WshShell.AppActivate "BlueStacks App Player 1"
+				WshShell.AppActivate "BlueStacks App Player"
 				WshShell.SendKeys "h"
 				Sleep 2.5
 				WshShell.SendKeys "x"
@@ -115,7 +115,7 @@ autokampf=startPoint.checked
 End sub
 Sub startPlayer()
 		strPathPlayer="""C:\Program Files\BlueStacks_nxt\HD-Player.exe"""
-		strAttr1 = " --instance Nougat32"
+		strAttr1 = " --instance P64"
 		strAttr2 = " --cmd launchApp"
 		strAttr3 = " --package "
 		strAttr4 = "com.lilithgame.hgame.gp"
@@ -125,7 +125,7 @@ Sub startPlayer()
 		PID=Player.ProcessID
 		'Checked is fight mode'
 		If autokampf = "true" Then
-			WshShell.AppActivate "BlueStacks App Player 1"
+			WshShell.AppActivate "BlueStacks App Player"
 			WriteLogger(vbTab&"______________________________<AFK Arena>_________________________________")
 			WriteLogger("")
 			WriteLogger(vbTab&"Bluestacks is activated")
@@ -140,7 +140,7 @@ Sub startPlayer()
 		End If
 End Sub
 Sub modusPlayer()
-	WshShell.AppActivate "BlueStacks App Player 1"
+	WshShell.AppActivate "BlueStacks App Player"
 	WriteLogger(vbTab&"Bluestacks is activated")
 	' WshShell.SendKeys "+(^T)"
 	' Sleep 2

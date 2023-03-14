@@ -1,2 +1,2 @@
 # AFK_Auto_Arena
-Automated AFK Arena Gameplay with GUI Interfac
+Automated AFK Arena Gameplay with GUI Interface
